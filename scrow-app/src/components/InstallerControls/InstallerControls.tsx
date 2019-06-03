@@ -5,7 +5,10 @@ import {
   StyledControlTitle,
   StyledFormBox,
   StyledInput,
-  StyledButton
+  StyledButton,
+  StyledSuccessTitle,
+  StyledSuccessSubTitle,
+  StyleSuccessBox
 } from "./styled/PageControls";
 import { faCog } from "@fortawesome/free-solid-svg-icons";
 import { ConfigValue } from "../../interfaces/InstallerControls/Controls";
@@ -18,26 +21,40 @@ class InstallerControls extends Component<{}, ConfigValue> {
       pageName: "",
       pageDescription: "",
       login: "",
-      password: ""
+      password: "",
+      isInstalled: false
     };
   }
 
-  setDataWithForm = (e: any) => {
-    const value: string = e.target.value;
-    const inputId: string = e.target.id;
+  setDataWithForm = (e: React.FormEvent<HTMLInputElement>) => {
+    const value: string = e.currentTarget.value;
+    const inputId: string = e.currentTarget.id;
 
     this.setState({
       [inputId]: value
     });
   };
 
-  setDataToDatabase = (e: any) => {
+  setDataToDatabase = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    this.setState({
+      isInstalled: true
+    });
     console.log(this.state);
   };
 
   render() {
-    return (
+    const stageInstaller: any = this.state.isInstalled ? (
+      <StyledControlBox>
+        <StyleSuccessBox>
+          <StyledSuccessTitle>Udało się!</StyledSuccessTitle>
+          <StyledSuccessSubTitle>
+            Instalacja przebiegła pomyślnie.
+          </StyledSuccessSubTitle>
+          <StyledButton type="submit">PRZEJDŹ DO STRONY</StyledButton>
+        </StyleSuccessBox>
+      </StyledControlBox>
+    ) : (
       <StyledControlBox>
         <StyledIconCog icon={faCog} />
         <StyledControlTitle>Konfiguracja</StyledControlTitle>
@@ -74,6 +91,8 @@ class InstallerControls extends Component<{}, ConfigValue> {
         </StyledFormBox>
       </StyledControlBox>
     );
+
+    return stageInstaller;
   }
 }
 
