@@ -29,6 +29,32 @@ export const StyledControlTitle = styled.h2`
   margin-bottom: 20px;
 `;
 
+export const StyledSuccessTitle = styled.h1`
+  font-size: 1.8rem;
+  color: #283655;
+  font-weight: bold;
+  text-transform: uppercase;
+`;
+
+export const StyleSuccessBox = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const StyledSuccessSubTitle = styled.h2`
+  font-size: 1.5rem;
+  color: #283655;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-top: 18px;
+  margin-bottom: 15px;
+`;
+
 export const StyledFormBox = styled.form`
   width: 100%;
   height: auto;

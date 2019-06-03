@@ -3,4 +3,5 @@ export interface ConfigValue {
   pageDescription?: string;
   login?: string;
   password?: string;
+  isInstalled?: boolean;
 }
