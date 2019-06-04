@@ -11,7 +11,7 @@ export const StyledNavbar = styled.nav`
 `;
 
 export const StyledNavbarTitle = styled.h1`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #484848;
   font-weight: 500;
 `;
@@ -39,7 +39,7 @@ const slideBorder = keyframes`
 `;
 
 export const StyledHref = styled(Link)`
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #636363;
   font-weight: 500;
   text-transform: uppercase;
