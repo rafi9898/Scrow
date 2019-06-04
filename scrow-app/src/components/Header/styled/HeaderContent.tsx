@@ -4,7 +4,7 @@ export const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  min-height: 45vh;
   align-items: center;
   flex-direction: column;
   padding: 80px 20px;
@@ -13,13 +13,13 @@ export const StyledWrapper = styled.div`
 export const StyledContentTitle = styled.h2`
   color: #484848;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 `;
 
 export const StyledContentSubTitle = styled.h3`
   color: #676767;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 5px;
 `;
 
@@ -27,6 +27,7 @@ export const StyledContentButton = styled.button`
   background: #62d38f;
   color: #ffffff;
   font-weight: 500;
+  font-size: 1.1rem;
   box-shadow: 0px 0.4px 3px #333;
   border-radius: 5px;
   text-transform: uppercase;

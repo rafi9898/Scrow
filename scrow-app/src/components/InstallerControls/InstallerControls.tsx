@@ -44,7 +44,7 @@ class InstallerControls extends Component<{}, ConfigValue> {
   };
 
   render() {
-    const stageInstaller: any = this.state.isInstalled ? (
+    const stageInstaller: JSX.Element = this.state.isInstalled ? (
       <StyledControlBox>
         <StyleSuccessBox>
           <StyledSuccessTitle>Udało się!</StyledSuccessTitle>
