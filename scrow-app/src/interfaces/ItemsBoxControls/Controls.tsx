@@ -1,5 +1,5 @@
 export interface ConfigValue {
   searchWord?: string;
   category?: string;
-  completedCategorys: any;
+  completedCategorys: string[];
 }

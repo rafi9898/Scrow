@@ -4,6 +4,12 @@ export const ItemsWrapper = styled.div`
   width: 100%;
 `;
 
+export const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
 export const StyledSearchWrapper = styled.div`
   width: 40%;
   display: flex;

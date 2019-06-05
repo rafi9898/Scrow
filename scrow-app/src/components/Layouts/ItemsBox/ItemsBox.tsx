@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {
   ItemsWrapper,
+  StyledWrapper,
   StyledSearchWrapper,
   StyledSearch,
   StyledSelect,
@@ -8,19 +9,20 @@ import {
 } from "./styled/ItemsStyled";
 import { ConfigValue } from "../../../interfaces/ItemsBoxControls/Controls";
 import axios from "axios";
+import Item from "../../Item/Item";
 
 class ItemsBox extends Component<{}, ConfigValue> {
   state = {
     searchWord: "",
     category: "",
-    completedCategorys: null
+    completedCategorys: ["Nie można było wczytać kategori"]
   };
 
   componentDidMount() {
     const API = "https://kategorie-scrow.free.beeceptor.com/kategorie";
     axios.get(API).then(res => {
       const comCategory = res.data;
-      this.setState({ completedCategorys: comCategory });
+      this.setState({ completedCategorys: comCategory.category });
     });
   }
 
@@ -41,8 +43,12 @@ class ItemsBox extends Component<{}, ConfigValue> {
   render() {
     const categoryList =
       this.state.completedCategorys &&
-      this.state.completedCategorys.map(category => {
-        return <StyledOption value={category}>{category}</StyledOption>;
+      this.state.completedCategorys.map((category, index) => {
+        return (
+          <StyledOption key={index} value={category}>
+            {category}
+          </StyledOption>
+        );
       });
 
     return (
@@ -54,15 +60,15 @@ class ItemsBox extends Component<{}, ConfigValue> {
           />
           <StyledSelect onChange={this.setSearchCategory}>
             <StyledOption value="">Wybierz kategorie</StyledOption>
-            <StyledOption value="Samochody">Samochody</StyledOption>
-            <StyledOption value="Zabawki">Zabawki</StyledOption>
-            <StyledOption value="Gry">Gry</StyledOption>
-            <StyledOption value="Uroda">Uroda</StyledOption>
-            <StyledOption value="Jedzenie">Jedzenie</StyledOption>
-            <StyledOption value="Odzież">Odzież</StyledOption>
-            <StyledOption value="Inne">Inne</StyledOption>
+            {categoryList}
           </StyledSelect>
         </StyledSearchWrapper>
+
+        <StyledWrapper>
+          <Item />
+          <Item />
+          <Item />
+        </StyledWrapper>
       </ItemsWrapper>
     );
   }
