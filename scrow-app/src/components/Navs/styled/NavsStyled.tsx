@@ -8,7 +8,7 @@ export const StyledNavs = styled.div`
   border: 1px solid #707070;
   display: flex;
   justify-content: center;
-  padding: 30px;
+  padding: 19px;
 `;
 
 export const StyledWrapper = styled.div`
@@ -21,7 +21,7 @@ export const StyledNavsLink = styled(Link)`
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin-right: 20px;
   letter-spacing: 0.6px;
   transition: all 0.3s;

@@ -11,7 +11,7 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledSearchWrapper = styled.div`
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -19,7 +19,7 @@ export const StyledSearchWrapper = styled.div`
 `;
 
 export const StyledSearch = styled.input`
-  width: 70%;
+  width: 60%;
   height: 45px;
   color: #5d5d5d;
   font-size: 1rem;
@@ -31,7 +31,7 @@ export const StyledSearch = styled.input`
 `;
 
 export const StyledSelect = styled.select`
-  width: 30%;
+  width: 40%;
   height: 45px;
   text-align: center;
   text-transform: uppercase;
