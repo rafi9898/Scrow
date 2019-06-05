@@ -5,7 +5,7 @@ export const StyledItemBox = styled.div`
   width: 40%;
   height: auto;
   color: #ffffff;
-  border: 1px solid #707070;
+  box-shadow: 0px 1px 6px #333;
   border-radius: 10px;
   margin-bottom: 25px;
   margin-top: 25px;

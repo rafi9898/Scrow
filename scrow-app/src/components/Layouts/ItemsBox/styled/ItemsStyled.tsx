@@ -8,6 +8,7 @@ export const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 25px 10px;
 `;
 
 export const StyledSearchWrapper = styled.div`

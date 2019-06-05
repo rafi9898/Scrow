@@ -29,12 +29,12 @@ export const StyledListElement = styled.li`
 const slideBorder = keyframes`
 0% {
   border-width: 0%;
-  border-bottom: 1px solid #ffd02f;
+  border-bottom: 1px solid #FF4E61;
 }
 
 100% {
   border-width: 100%;
-  border-bottom: 1px solid #ffd02f;
+  border-bottom: 1px solid #FF4E61;
 }
 `;
 
