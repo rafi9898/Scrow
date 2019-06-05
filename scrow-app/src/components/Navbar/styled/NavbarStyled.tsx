@@ -11,7 +11,7 @@ export const StyledNavbar = styled.nav`
 `;
 
 export const StyledNavbarTitle = styled.h1`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #484848;
   font-weight: 500;
 `;
@@ -29,17 +29,17 @@ export const StyledListElement = styled.li`
 const slideBorder = keyframes`
 0% {
   border-width: 0%;
-  border-bottom: 1px solid #ffd02f;
+  border-bottom: 1px solid #FF4E61;
 }
 
 100% {
   border-width: 100%;
-  border-bottom: 1px solid #ffd02f;
+  border-bottom: 1px solid #FF4E61;
 }
 `;
 
 export const StyledHref = styled(Link)`
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #636363;
   font-weight: 500;
   text-transform: uppercase;

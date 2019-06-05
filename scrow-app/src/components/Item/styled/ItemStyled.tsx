@@ -5,7 +5,7 @@ export const StyledItemBox = styled.div`
   width: 40%;
   height: auto;
   color: #ffffff;
-  border: 1px solid #707070;
+  box-shadow: 0px 1px 6px #333;
   border-radius: 10px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -19,8 +19,11 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledImgBox = styled.div`
-  min-width: 40%;
-  min-height: 100%;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 50px;
+  margin-left: 40px;
   background-image: url(${ItemLogo});
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -31,11 +34,11 @@ export const StyledContentBox = styled.div`
   width: 60%;
   height: 100%;
   text-align: center;
-  padding: 20px 45px;
+  padding: 20px 25px;
 `;
 
 export const StyledItemTitle = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #4b4b4b;
   font-weight: bold;
   text-transform: uppercase;
@@ -51,7 +54,7 @@ export const StyledItemPrice = styled.span`
 `;
 
 export const StyledItemDescription = styled.p`
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #676767;
   text-align: center;
   margin-bottom: 24px;
@@ -67,5 +70,11 @@ export const StyledItemButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 10px 45px;
+  padding: 10px 65px;
+  transition: all 0.3s;
+
+  &:hover {
+    transition: all 0.3s;
+    background-color: #455ca4;
+  }
 `;
