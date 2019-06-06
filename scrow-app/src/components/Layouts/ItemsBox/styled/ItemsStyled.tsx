@@ -36,7 +36,7 @@ export const StyledSelect = styled.select`
   height: 45px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #535353;
   outline-color: #069719;
 `;
@@ -46,6 +46,6 @@ export const StyledOption = styled.option`
   width: 100%;
   letter-spacing: 0.6px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
 `;
