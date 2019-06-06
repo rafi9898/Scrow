@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ItemLogo from "../../../assets/wlosy-logo.png";
 
 export const StyledItemBox = styled.div`
   width: 40%;
@@ -10,6 +9,7 @@ export const StyledItemBox = styled.div`
   margin-bottom: 25px;
   margin-top: 25px;
   margin-right: 30px;
+  padding: 20px 0px;
 `;
 
 export const StyledContainer = styled.div`
@@ -18,16 +18,11 @@ export const StyledContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const StyledImgBox = styled.div`
+export const StyledImgBox = styled.img`
   width: 150px;
   height: 150px;
-  position: relative;
-  top: 50px;
-  margin-left: 40px;
-  background-image: url(${ItemLogo});
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
+  margin-left: 7%;
+  margin-top: 3%;
 `;
 
 export const StyledContentBox = styled.div`

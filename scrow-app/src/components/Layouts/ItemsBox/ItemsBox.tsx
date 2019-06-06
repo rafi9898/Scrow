@@ -66,8 +66,6 @@ class ItemsBox extends Component<{}, ConfigValue> {
 
         <StyledWrapper>
           <Item />
-          <Item />
-          <Item />
         </StyledWrapper>
       </ItemsWrapper>
     );

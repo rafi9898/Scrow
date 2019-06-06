@@ -9,27 +9,51 @@ import {
   StyledItemDescription,
   StyledItemButton
 } from "./styled/ItemStyled";
+import { StateValue } from "../../interfaces/Item/ItemControls";
+import axios from "axios";
 
-class Item extends Component {
+class Item extends Component<{}, StateValue> {
+  state = {
+    products: [
+      { id: 0, nazwa: "Brak danych", opis: "Brak danych", cena: 0, imgUrl: "" }
+    ],
+    isLoaded: false
+  };
+
+  componentDidMount() {
+    axios.get("https://scrow-app.free.beeceptor.com/produkty").then(res => {
+      const products = res.data;
+      this.setState({
+        products,
+        isLoaded: true
+      });
+    });
+  }
+
   render() {
-    return (
-      <StyledItemBox>
-        <StyledContainer>
-          <StyledImgBox />
+    const ItemList = this.state.products && this.state.products;
+    const ShowItemList = this.state.isLoaded ? (
+      ItemList.map(item => {
+        return (
+          <StyledItemBox>
+            <StyledContainer>
+              <StyledImgBox src={item.imgUrl} alt="item img" />
 
-          <StyledContentBox>
-            <StyledItemTitle>Strzyżenie włosów</StyledItemTitle>
-            <StyledItemPrice>Koszt: 25zł</StyledItemPrice>
-            <StyledItemDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a
-              sapien a enim pharetra malesuada. Integer molestie mauris et ante
-              sagittis aliquet. In ut augue nisi.
-            </StyledItemDescription>
-            <StyledItemButton>Zobacz</StyledItemButton>
-          </StyledContentBox>
-        </StyledContainer>
-      </StyledItemBox>
+              <StyledContentBox>
+                <StyledItemTitle>{item.nazwa}</StyledItemTitle>
+                <StyledItemPrice>Cena: {item.cena} zł</StyledItemPrice>
+                <StyledItemDescription>{item.opis}</StyledItemDescription>
+                <StyledItemButton>Zobacz</StyledItemButton>
+              </StyledContentBox>
+            </StyledContainer>
+          </StyledItemBox>
+        );
+      })
+    ) : (
+      <p>Brak danych do wczytania!</p>
     );
+
+    return <React.Fragment>{ShowItemList}</React.Fragment>;
   }
 }
 
