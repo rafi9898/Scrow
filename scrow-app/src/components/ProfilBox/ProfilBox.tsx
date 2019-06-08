@@ -1,6 +1,7 @@
 import React from "react";
 import {
   StyledWrapper,
+  StyledLink,
   StyledTitle,
   StyledContainer,
   StyledRow,
@@ -42,7 +43,10 @@ const ProfilBox = () => {
           </StyledLabel>
         </StyledRow>
       </StyledContainer>
-      <StyledButtonDanger>Edytuj</StyledButtonDanger>
+
+      <StyledLink to="/edit-profile">
+        <StyledButtonDanger>Edytuj</StyledButtonDanger>
+      </StyledLink>
     </StyledWrapper>
   );
 };
