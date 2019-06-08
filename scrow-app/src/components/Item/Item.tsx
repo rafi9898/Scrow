@@ -13,7 +13,7 @@ import { StateValue } from "../../interfaces/Item/ItemControls";
 import axios from "axios";
 import PaginationReact from "../Pagination/PaginationReact";
 
-class Item extends Component<{}, StateValue> {
+class Item extends Component<any, StateValue> {
   state = {
     products: [
       { id: 0, nazwa: "Brak danych", opis: "Brak danych", cena: 0, imgUrl: "" }
@@ -41,27 +41,37 @@ class Item extends Component<{}, StateValue> {
   };
 
   render() {
-    const ItemList = this.state.products && this.state.products;
-    const ShowItemList = this.state.isLoaded ? (
-      ItemList.slice(
-        (this.state.currentPage - 1) * 5,
-        this.state.currentPage * 5
-      ).map(item => {
-        return (
-          <StyledItemBox key={item.id}>
-            <StyledContainer>
-              <StyledImgBox src={item.imgUrl} alt="item img" />
+    const { searchItem } = this.props;
 
-              <StyledContentBox>
-                <StyledItemTitle>{item.nazwa}</StyledItemTitle>
-                <StyledItemPrice>Cena: {item.cena} zł</StyledItemPrice>
-                <StyledItemDescription>{item.opis}</StyledItemDescription>
-                <StyledItemButton>Zobacz</StyledItemButton>
-              </StyledContentBox>
-            </StyledContainer>
-          </StyledItemBox>
-        );
-      })
+    const ItemList = this.state.products && this.state.products;
+
+    const filterList = searchItem
+      ? ItemList.filter(item => {
+          return item.nazwa.toUpperCase().includes(searchItem.toUpperCase());
+        })
+      : null;
+
+    const currentItems = filterList ? filterList : ItemList;
+
+    const ShowItemList = this.state.isLoaded ? (
+      currentItems
+        .slice((this.state.currentPage - 1) * 5, this.state.currentPage * 5)
+        .map(item => {
+          return (
+            <StyledItemBox key={item.id}>
+              <StyledContainer>
+                <StyledImgBox src={item.imgUrl} alt="item img" />
+
+                <StyledContentBox>
+                  <StyledItemTitle>{item.nazwa}</StyledItemTitle>
+                  <StyledItemPrice>Cena: {item.cena} zł</StyledItemPrice>
+                  <StyledItemDescription>{item.opis}</StyledItemDescription>
+                  <StyledItemButton>Zobacz</StyledItemButton>
+                </StyledContentBox>
+              </StyledContainer>
+            </StyledItemBox>
+          );
+        })
     ) : (
       <p>Brak danych do wczytania!</p>
     );
@@ -71,7 +81,7 @@ class Item extends Component<{}, StateValue> {
         {ShowItemList}
         <PaginationReact
           activePage={1}
-          totalItems={this.state.isLoaded ? this.state.products.length : 0}
+          totalItems={this.state.isLoaded ? currentItems.length : 0}
           currentPage={this.setCurrentPage}
           pageSize={this.state.pageSize}
         />
