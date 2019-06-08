@@ -65,7 +65,7 @@ class ItemsBox extends Component<{}, ConfigValue> {
         </StyledSearchWrapper>
 
         <StyledWrapper>
-          <Item />
+          <Item searchItem={this.state.searchWord} />
         </StyledWrapper>
       </ItemsWrapper>
     );
