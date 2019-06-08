@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { Email } from "styled-icons/material/Email";
 import { User } from "styled-icons/boxicons-regular/User";
+import { Link } from "react-router-dom";
 
 export const StyledWrapper = styled.div`
   width: 100%;
   text-align: center;
   padding: 55px 10px;
 `;
+
+export const StyledLink = styled(Link)``;
 
 export const StyledTitle = styled.h2`
   font-size: 1.4rem;
