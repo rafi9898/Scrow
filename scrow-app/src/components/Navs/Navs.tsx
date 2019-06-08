@@ -4,7 +4,7 @@ import SignOutLinks from "./SignOutLinks";
 import { StyledNavs } from "./styled/NavsStyled";
 
 const Navs = () => {
-  const [isSignIn] = useState(true);
+  const [isSignIn] = useState(false);
   const currentLinks = !isSignIn ? <SignInLinks /> : <SignOutLinks />;
 
   return <StyledNavs>{currentLinks}</StyledNavs>;
