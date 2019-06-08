@@ -18,6 +18,11 @@ export const StyledContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+export const StyledLoadingIcon = styled.img`
+  width: 30%;
+  margin: 0 auto;
+`;
+
 export const StyledImgBox = styled.img`
   width: 150px;
   height: 150px;

@@ -4,8 +4,8 @@ import { StyledWrapper, StyledNavsLink } from "./styled/NavsStyled";
 const SignInLinks = () => {
   return (
     <StyledWrapper>
-      <StyledNavsLink to="#">ZALOGUJ SIĘ</StyledNavsLink>
-      <StyledNavsLink to="#">ZAREJESTRUJ SIĘ</StyledNavsLink>
+      <StyledNavsLink to="/login">ZALOGUJ SIĘ</StyledNavsLink>
+      <StyledNavsLink to="/register">ZAREJESTRUJ SIĘ</StyledNavsLink>
     </StyledWrapper>
   );
 };
