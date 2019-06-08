@@ -7,11 +7,13 @@ import {
   StyledItemTitle,
   StyledItemPrice,
   StyledItemDescription,
-  StyledItemButton
+  StyledItemButton,
+  StyledLoadingIcon
 } from "./styled/ItemStyled";
 import { StateValue } from "../../interfaces/Item/ItemControls";
 import axios from "axios";
 import PaginationReact from "../Pagination/PaginationReact";
+import LoadingIcon from "../../assets/loading-spinner.svg";
 
 class Item extends Component<any, StateValue> {
   state = {
@@ -73,7 +75,9 @@ class Item extends Component<any, StateValue> {
           );
         })
     ) : (
-      <p>Brak danych do wczytania!</p>
+      <p style={{ textAlign: "center" }}>
+        <StyledLoadingIcon src={LoadingIcon} />
+      </p>
     );
 
     return (
