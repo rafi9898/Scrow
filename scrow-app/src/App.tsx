@@ -3,6 +3,7 @@ import Installer from "./components/Layouts/Installer/Installer";
 import Home from "./components/Pages/Home/Home";
 import SignIn from "./components/Pages/SignIn/SignIn";
 import SignUp from "./components/Pages/SignUp/SignUp";
+import Profile from "./components/Pages/Profile/Profile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -14,6 +15,7 @@ const App: React.FC = () => {
           <Route path="/installer" component={Installer} />
           <Route path="/login" component={SignIn} />
           <Route path="/register" component={SignUp} />
+          <Route path="/profile" component={Profile} />
         </Switch>
       </BrowserRouter>
     </div>
