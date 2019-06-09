@@ -9,6 +9,7 @@ export const StyledWrapper = styled.div`
 export const StyledContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 `;
 
 export const StyledSectionTitle = styled.h3`
@@ -31,6 +32,11 @@ export const StyledAvatar = styled.div`
   color: #484848;
   letter-spacing: 0.7px;
   margin-right: 20px;
+`;
+
+export const StyledLoadingIcon = styled.img`
+  width: 5%;
+  margin: 0 auto;
 `;
 
 export const StyledNickName = styled.p`
