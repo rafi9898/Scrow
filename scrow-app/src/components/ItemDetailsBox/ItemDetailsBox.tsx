@@ -12,6 +12,7 @@ import {
 } from "./styled/DetailsStyled";
 import ImageGallery from "react-image-gallery";
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
+import Comments from "../Layouts/Comments/Comments";
 
 class ItemDetailsBox extends Component {
   render() {
@@ -49,11 +50,12 @@ class ItemDetailsBox extends Component {
 
             <SubTitleCount>Liczba sztuk: </SubTitleCount>
             <StyledCounter value="1" type="number" min={1} max={10} />
+            <StyledItemButton>
+              <StyledIconCard /> KUPUJĘ
+            </StyledItemButton>
           </StyledRow>
         </StyledContainer>
-        <StyledItemButton>
-          <StyledIconCard /> KUPUJĘ
-        </StyledItemButton>
+        <Comments />
       </StyledWrapper>
     );
   }

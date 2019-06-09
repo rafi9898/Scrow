@@ -40,11 +40,12 @@ export const StyledItemDescription = styled.p`
   margin-bottom: 20px;
 `;
 
-export const SubTitleCount = styled.span`
+export const SubTitleCount = styled.p`
   font-size: #404040;
   font-size: 1.2rem;
   color: #404040;
   margin-right: 5px;
+  display: inline-block;
 `;
 
 export const StyledCounter = styled.input`
