@@ -57,7 +57,10 @@ class Item extends Component<any, StateValue> {
 
     const ShowItemList = this.state.isLoaded ? (
       currentItems
-        .slice((this.state.currentPage - 1) * 5, this.state.currentPage * 5)
+        .slice(
+          (this.state.currentPage - 1) * this.state.loadItems,
+          this.state.currentPage * this.state.loadItems
+        )
         .map(item => {
           return (
             <StyledItemBox key={item.id}>
