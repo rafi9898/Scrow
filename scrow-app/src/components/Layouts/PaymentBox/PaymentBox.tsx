@@ -21,9 +21,27 @@ import {
 } from "./styled/PaymentStyled";
 import DotpayLogo from "../../../assets/dotpay-logo.png";
 import PaypalLogo from "../../../assets/paypal-logo.png";
+import { PaymentControls } from "../../../interfaces/Payment/PaymentControls";
 
-class PaymentBox extends Component {
+class PaymentBox extends Component<{}, PaymentControls> {
+  state = {
+    selectedPayment: ""
+  };
+
+  setPaymentMethod = (e: any) => {
+    const paymentName = e.currentTarget.id;
+    this.setState({
+      selectedPayment: paymentName
+    });
+  };
+
   render() {
+    const selectedPaymentStyle = {
+      border: "1px solid #48b774",
+      transition: "all 0.3s",
+      boxShadow: "1px 1px 4px #333"
+    };
+
     return (
       <StyledWrapper>
         <StyledContainer>
@@ -42,8 +60,28 @@ class PaymentBox extends Component {
             <StyledTextarea />
             <StyledLabel>Wybierz sposób płatności</StyledLabel>
             <StyledRow>
-              <StyledPaymentLogo src={DotpayLogo} alt="dotpay logo" />
-              <StyledPaymentLogo src={PaypalLogo} alt="paypal logo" />
+              <StyledPaymentLogo
+                style={
+                  this.state.selectedPayment === "dotpay"
+                    ? selectedPaymentStyle
+                    : null
+                }
+                id="dotpay"
+                onClick={this.setPaymentMethod}
+                src={DotpayLogo}
+                alt="dotpay logo"
+              />
+              <StyledPaymentLogo
+                style={
+                  this.state.selectedPayment === "paypal"
+                    ? selectedPaymentStyle
+                    : null
+                }
+                id="paypal"
+                onClick={this.setPaymentMethod}
+                src={PaypalLogo}
+                alt="paypal logo"
+              />
             </StyledRow>
 
             <StyledSummaryBox>
