@@ -29,11 +29,11 @@ export const StyledSubTitle = styled.p`
   font-size: 1.4rem;
   color: #3e3e3e;
   margin-bottom: 30px;
-  text-align: center;
 `;
 
 export const StyledSelect = styled.select`
   width: 50%;
+  text-align-last: center;
   height: 45px;
   color: #3e3e3e;
   text-align: center;
@@ -56,7 +56,7 @@ export const StyledTextarea = styled.textarea`
   height: 210px;
   text-align: center;
   line-height: 100%;
-  padding: 6px 5px;
+  padding: 6px 15px;
   display: block;
   color: #3e3e3e;
   margin: 0 auto;
@@ -151,11 +151,11 @@ export const StyledButtonPrimary = styled.button`
   color: #fff;
   background: #005291;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 40px;
   border: none;
   outline: none;
-  padding: 10px 40px;
+  padding: 10px 60px;
   cursor: pointer;
   box-shadow: 0px 1px 5px #3b3b3b;
   transition: all 0.3s;
