@@ -5,7 +5,7 @@ const SignOutLinks = () => {
   return (
     <StyledWrapper>
       <StyledNavsLink to="/profile">MÓJ PROFIL</StyledNavsLink>
-      <StyledNavsLink to="#">MOJE ZAKUPY</StyledNavsLink>
+      <StyledNavsLink to="/my-orders">MOJE ZAKUPY</StyledNavsLink>
       <StyledNavsLink to="#">WYLOGUJ</StyledNavsLink>
     </StyledWrapper>
   );
