@@ -17,6 +17,11 @@ export const StyledSearchWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   margin-top: 30px;
+
+  @media (max-width: 940px) {
+    flex-direction: column;
+    width: 80%;
+  }
 `;
 
 export const StyledSearch = styled.input`
@@ -29,6 +34,12 @@ export const StyledSearch = styled.input`
   margin-right: 20px;
   outline-color: #069719;
   padding-left: 10px;
+
+  @media (max-width: 940px) {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 6px;
+  }
 `;
 
 export const StyledSelect = styled.select`
@@ -39,6 +50,11 @@ export const StyledSelect = styled.select`
   font-size: 1rem;
   color: #535353;
   outline-color: #069719;
+
+  @media (max-width: 940px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export const StyledOption = styled.option`

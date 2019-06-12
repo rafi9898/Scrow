@@ -27,6 +27,11 @@ export const StyledNavsLink = styled(Link)`
   transition: all 0.3s;
   text-align: center;
 
+  @media (max-width: 550px) {
+    font-size: 0.8rem;
+    margin-right: 8px;
+  }
+
   &:hover {
     transition: all 0.3s;
     color: #ddd;

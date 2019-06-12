@@ -10,12 +10,19 @@ export const StyledItemBox = styled.div`
   margin-top: 25px;
   margin-right: 30px;
   padding: 20px 0px;
+
+  @media (max-width: 940px) {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 `;
 
 export const StyledContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const StyledLoadingIcon = styled.img`
@@ -35,6 +42,11 @@ export const StyledContentBox = styled.div`
   height: 100%;
   text-align: center;
   padding: 20px 25px;
+
+  @media (max-width: 940px) {
+    padding: 20px 5px;
+    width: 80%;
+  }
 `;
 
 export const StyledItemTitle = styled.h2`
@@ -72,6 +84,10 @@ export const StyledItemButton = styled.button`
   cursor: pointer;
   padding: 10px 65px;
   transition: all 0.3s;
+
+  @media (max-width: 940px) {
+    padding: 10px 30px;
+  }
 
   &:hover {
     transition: all 0.3s;
