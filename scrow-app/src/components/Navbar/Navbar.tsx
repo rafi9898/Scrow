@@ -6,24 +6,34 @@ import {
   StyledListElement,
   StyledHref
 } from "./styled/NavbarStyled";
+import windowSize from "react-window-size";
+import MobileNavbar from "./MobileNavbar";
 
-class Navbar extends Component {
+class Navbar extends Component<any, any> {
   render() {
+    const navbarItem = this.props.windowWidth <= 600 ? <MobileNavbar /> : null;
+
     return (
       <StyledNavbar>
-        <StyledNavbarTitle>TWOJANAZWA</StyledNavbarTitle>
-        <StyledList>
-          <StyledListElement>
-            <StyledHref to="/">Strona Główna</StyledHref>
-          </StyledListElement>
+        {navbarItem ? (
+          navbarItem
+        ) : (
+          <React.Fragment>
+            <StyledNavbarTitle>TWOJANAZWA</StyledNavbarTitle>
+            <StyledList>
+              <StyledListElement>
+                <StyledHref to="/">Strona Główna</StyledHref>
+              </StyledListElement>
 
-          <StyledListElement>
-            <StyledHref to="/">Kontakt</StyledHref>
-          </StyledListElement>
-        </StyledList>
+              <StyledListElement>
+                <StyledHref to="/">Kontakt</StyledHref>
+              </StyledListElement>
+            </StyledList>{" "}
+          </React.Fragment>
+        )}
       </StyledNavbar>
     );
   }
 }
 
-export default Navbar;
+export default windowSize(Navbar);
