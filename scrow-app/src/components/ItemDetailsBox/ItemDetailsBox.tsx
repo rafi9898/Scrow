@@ -14,6 +14,7 @@ import {
 import ImageGallery from "react-image-gallery";
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 import Comments from "../Layouts/Comments/Comments";
+import windowSize from "react-window-size";
 
 class ItemDetailsBox extends Component {
   render() {
@@ -35,7 +36,7 @@ class ItemDetailsBox extends Component {
     return (
       <StyledWrapper>
         <StyledContainer>
-          <StyledRow style={{ width: "30%", maxHeight: "250px !important" }}>
+          <StyledRow style={{ width: "40%", maxHeight: "250px !important" }}>
             <ImageGallery showThumbnails={false} items={images} />
           </StyledRow>
 
