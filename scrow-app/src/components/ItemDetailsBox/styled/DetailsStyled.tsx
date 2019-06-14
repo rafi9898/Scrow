@@ -7,15 +7,13 @@ export const StyledWrapper = styled.div`
   padding: 70px 30px;
 `;
 
-export const StyledImgItem = styled.img`
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
-  transition: all 0.3s;
+export const StyledContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-  &:hover {
-    transition: all 0.3s;
-    transform: scale(1.1);
+  @media (max-width: 1100px) {
+    flex-direction: column;
   }
 `;
 
@@ -25,6 +23,10 @@ export const StyledItemTitle = styled.h2`
   color: #2d2d2d;
   font-weight: bold;
   margin-bottom: 10px;
+
+  @media (max-width: 1315px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const StyledItemPrice = styled.p`
@@ -32,12 +34,20 @@ export const StyledItemPrice = styled.p`
   color: #0f0f0f;
   font-size: 1.2rem;
   margin-bottom: 10px;
+
+  @media (max-width: 1315px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const StyledItemDescription = styled.p`
   font-size: 1.2rem;
   color: #404040;
   margin-bottom: 20px;
+
+  @media (max-width: 1315px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const SubTitleCount = styled.p`
@@ -60,6 +70,10 @@ export const StyledIconCard = styled(CreditCard)`
   width: 20px;
   color: #ffffff;
   margin-right: 5px;
+
+  @media (max-width: 1315px) {
+    width: 16px;
+  }
 `;
 
 export const StyledItemButton = styled.button`
@@ -76,6 +90,10 @@ export const StyledItemButton = styled.button`
   transition: all 0.3s;
   margin-top: 30px;
   border-radius: 12px;
+
+  @media (max-width: 1315px) {
+    padding: 15px 45px;
+  }
 
   &:hover {
     transition: all 0.3s;

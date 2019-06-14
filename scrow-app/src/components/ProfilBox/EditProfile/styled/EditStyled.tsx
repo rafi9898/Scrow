@@ -12,11 +12,20 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (max-width: 995px) {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
 `;
 
 export const StyledRow = styled.div`
   width: 50%;
   padding: 0 30px;
+
+  @media (max-width: 995px) {
+    width: 100%;
+  }
 `;
 
 export const StyledLabel = styled.label`
@@ -33,6 +42,10 @@ export const StyledInput = styled.input`
   text-align: center;
   margin-bottom: 15px;
   margin-top: 3px;
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledButtonPrimary = styled.button`
@@ -48,6 +61,11 @@ export const StyledButtonPrimary = styled.button`
   cursor: pointer;
   box-shadow: 0px 1px 5px #3b3b3b;
   transition: all 0.3s;
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 
   &:hover {
     background: #004072;

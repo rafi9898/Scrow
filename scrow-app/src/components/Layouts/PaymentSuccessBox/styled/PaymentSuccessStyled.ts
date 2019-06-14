@@ -20,6 +20,11 @@ export const StyledSerpentineImg = styled.img`
   width: 70px;
   height: 70px;
   margin-bottom: 20px;
+
+  @media (max-width: 555px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const StyledSuccessLabel = styled.span`
@@ -33,6 +38,11 @@ export const StyledSuccessLabel = styled.span`
   margin-top: 7px;
   border: 1px solid #707070;
   box-shadow: 0px 0px 2px #707070;
+
+  @media (max-width: 555px) {
+    padding: 7px 35px;
+    font-size: 1rem;
+  }
 `;
 
 export const StyledSuccessMessage = styled.p`
@@ -41,4 +51,8 @@ export const StyledSuccessMessage = styled.p`
   color: #484848;
   letter-spacing: 0.5px;
   margin-top: 25px;
+
+  @media (max-width: 555px) {
+    font-size: 1.2rem;
+  }
 `;
