@@ -27,11 +27,20 @@ export const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: 0 auto;
+
+  @media (max-width: 995px) {
+    flex-direction: column;
+    width: 95%;
+  }
 `;
 
 export const StyledRow = styled.div`
   width: auto;
   padding: 10px 70px;
+
+  @media (max-width: 995px) {
+    padding: 10px 20px;
+  }
 `;
 
 export const StyledIconEmail = styled(Email)`
@@ -50,6 +59,10 @@ export const StyledLabel = styled.p`
   font-size: 1.2rem;
   color: #5e5e5e;
   margin-bottom: 4px;
+
+  @media (max-width: 400px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const StyledSpan = styled.span`
@@ -57,6 +70,10 @@ export const StyledSpan = styled.span`
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 4px;
+
+  @media (max-width: 400px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const StyledButtonDanger = styled.button`
@@ -73,6 +90,10 @@ export const StyledButtonDanger = styled.button`
   box-shadow: 0px 1px 5px #3b3b3b;
   transition: all 0.3s;
   border-radius: 7px;
+
+  @media (max-width: 400px) {
+    padding: 10px 30px;
+  }
 
   &:hover {
     background: #d84353;

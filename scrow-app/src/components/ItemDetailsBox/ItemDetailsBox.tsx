@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { StyledContainer, StyledRow } from "../Style/Grid";
+import { StyledRow } from "../Style/Grid";
 import {
   StyledWrapper,
+  StyledContainer,
   StyledItemTitle,
   StyledItemPrice,
   StyledItemDescription,

@@ -18,11 +18,23 @@ export const StyledSectionTitle = styled.h2`
   text-align: center;
   margin-bottom: 30px;
   text-transform: uppercase;
+
+  @media (max-width: 550px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const StyledOrdersBox = styled.div`
   width: 40%;
   margin: 0 auto;
+
+  @media (max-width: 955px) {
+    width: 80%;
+  }
+
+  @media (max-width: 550px) {
+    width: 90%;
+  }
 `;
 
 export const StyledOrderItem = styled.div`
@@ -40,6 +52,10 @@ export const StyledOrderTitle = styled.h4`
   text-transform: uppercase;
   letter-spacing: 0.7px;
   font-size: 1.1rem;
+
+  @media (max-width: 550px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const StyledOrderLabel = styled.p`
@@ -48,6 +64,10 @@ export const StyledOrderLabel = styled.p`
   letter-spacing: 0.6px;
   font-size: 1.1rem;
   margin-top: 2px;
+
+  @media (max-width: 550px) {
+    font-size: 0.9rem;
+  }
 `;
 
 interface Props {

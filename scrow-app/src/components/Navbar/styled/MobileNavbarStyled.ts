@@ -12,6 +12,7 @@ export const StyledWrapper = styled.div`
 export const StyledHamburgerIcon = styled(Navicon)`
   width: 60px;
   color: #000;
+  cursor: pointer;
 `;
 
 export const StyledMobileNavBox = styled.div`
@@ -22,6 +23,9 @@ export const StyledMobileNavBox = styled.div`
   left: 0;
   background-color: #232323;
   animation: ${keyFrameSildeNav} 1s ease-in-out 0s;
+  animation-fill-mode: backwards, forwards;
+  animation-direction: alternate, normal;
+  animation-timing-function: ease-in-out, linear;
 `;
 
 export const StyledContainer = styled.div`
@@ -45,6 +49,7 @@ export const StyledCloseIcon = styled(Close)`
   margin-top: 19px;
   position: absolute;
   color: #ddd;
+  cursor: pointer;
 `;
 
 export const StyledLinkWrapper = styled.div`
