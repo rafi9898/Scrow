@@ -35,7 +35,7 @@ class Comments extends Component<{}, StateValue> {
   };
 
   componentDidMount() {
-    axios.get("https://komentarze.free.beeceptor.com/komentarze").then(res => {
+    axios.get("https://komentarzemoje-tak.free.beeceptor.com").then(res => {
       this.setState({
         comments: res.data,
         isLoaded: true

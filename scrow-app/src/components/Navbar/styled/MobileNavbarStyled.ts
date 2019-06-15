@@ -18,6 +18,7 @@ export const StyledHamburgerIcon = styled(Navicon)`
 export const StyledMobileNavBox = styled.div`
   width: 100vw;
   height: 100vh;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;

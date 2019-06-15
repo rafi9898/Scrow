@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { StyledRow } from "../Style/Grid";
 import {
   StyledWrapper,
   StyledContainer,
@@ -9,7 +8,9 @@ import {
   SubTitleCount,
   StyledCounter,
   StyledIconCard,
-  StyledItemButton
+  StyledItemButton,
+  StyledRow,
+  StyledRowImage
 } from "./styled/DetailsStyled";
 import ImageGallery from "react-image-gallery";
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
@@ -35,13 +36,11 @@ class ItemDetailsBox extends Component {
     return (
       <StyledWrapper>
         <StyledContainer>
-          <StyledRow style={{ width: "30%", maxHeight: "250px !important" }}>
+          <StyledRowImage>
             <ImageGallery showThumbnails={false} items={images} />
-          </StyledRow>
+          </StyledRowImage>
 
-          <StyledRow
-            style={{ width: "30%", paddingLeft: "3%", textAlign: "justify" }}
-          >
+          <StyledRow>
             <StyledItemTitle>Strzyżenie włosów</StyledItemTitle>
             <StyledItemPrice>Koszt: 25zł</StyledItemPrice>
             <StyledItemDescription>
