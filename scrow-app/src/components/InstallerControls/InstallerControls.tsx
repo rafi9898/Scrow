@@ -8,7 +8,8 @@ import {
   StyledButton,
   StyledSuccessTitle,
   StyledSuccessSubTitle,
-  StyleSuccessBox
+  StyleSuccessBox,
+  StyledLink
 } from "./styled/PageControls";
 import { faCog } from "@fortawesome/free-solid-svg-icons";
 import { ConfigValue } from "../../interfaces/InstallerControls/Controls";
@@ -51,7 +52,9 @@ class InstallerControls extends Component<{}, ConfigValue> {
           <StyledSuccessSubTitle>
             Instalacja przebiegła pomyślnie.
           </StyledSuccessSubTitle>
-          <StyledButton type="submit">PRZEJDŹ DO STRONY</StyledButton>
+          <StyledButton type="submit">
+            <StyledLink to="/">PRZEJDŹ DO STRONY</StyledLink>
+          </StyledButton>
         </StyleSuccessBox>
       </StyledControlBox>
     ) : (

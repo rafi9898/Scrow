@@ -6,6 +6,7 @@ export const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `;
 
 export const StyledContainer = styled.div`
@@ -22,6 +23,10 @@ export const StyledLogo = styled.h1`
   margin-top: 23px;
   margin-left: 45px;
   text-transform: uppercase;
+
+  @media (max-width: 1000px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const StyledSectionTitle = styled.p`
@@ -30,6 +35,10 @@ export const StyledSectionTitle = styled.p`
   margin-top: 2px;
   color: #c7c7c7;
   text-transform: uppercase;
+
+  @media (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const StyledPlanetImg = styled.img`
@@ -37,4 +46,8 @@ export const StyledPlanetImg = styled.img`
   right: -130px;
   width: 25%;
   bottom: -80px;
+
+  @media (max-width: 1350px) {
+    display: none;
+  }
 `;

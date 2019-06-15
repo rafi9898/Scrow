@@ -27,6 +27,10 @@ export const StyledItemTitle = styled.h2`
   @media (max-width: 1315px) {
     font-size: 1.4rem;
   }
+
+  @media (max-width: 550px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const StyledItemPrice = styled.p`
@@ -38,6 +42,10 @@ export const StyledItemPrice = styled.p`
   @media (max-width: 1315px) {
     font-size: 1.1rem;
   }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledItemDescription = styled.p`
@@ -48,6 +56,10 @@ export const StyledItemDescription = styled.p`
   @media (max-width: 1315px) {
     font-size: 1.1rem;
   }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+  }
 `;
 
 export const SubTitleCount = styled.p`
@@ -56,6 +68,10 @@ export const SubTitleCount = styled.p`
   color: #404040;
   margin-right: 5px;
   display: inline-block;
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledCounter = styled.input`
@@ -64,6 +80,12 @@ export const StyledCounter = styled.input`
   text-align: center;
   font-size: 1.1rem;
   color: #343434;
+
+  @media (max-width: 1100px) {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3px;
+  }
 `;
 
 export const StyledIconCard = styled(CreditCard)`
@@ -90,13 +112,47 @@ export const StyledItemButton = styled.button`
   transition: all 0.3s;
   margin-top: 30px;
   border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
 
   @media (max-width: 1315px) {
     padding: 15px 45px;
   }
 
+  @media (max-width: 550px) {
+    font-size: 0.9rem;
+    padding: 12px 35px;
+  }
+
   &:hover {
     transition: all 0.3s;
     background-color: #141414;
+  }
+`;
+
+export const StyledRow = styled.div`
+  width: 30%;
+
+  @media (max-width: 1100px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+`;
+
+export const StyledRowImage = styled.div`
+  width: 20%;
+  max-height: "250px !important";
+
+  @media (max-width: 1100px) {
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 550px) {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 20px;
   }
 `;

@@ -4,12 +4,19 @@ export const StyledWrapper = styled.div`
   width: 60%;
   margin: 0 auto;
   padding: 70px 0px 70px 0px;
+
+  @media (max-width: 770px) {
+    width: 80%;
+  }
 `;
 
 export const StyledContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 30px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledSectionTitle = styled.h3`
@@ -20,6 +27,14 @@ export const StyledSectionTitle = styled.h3`
   letter-spacing: 0.5px;
   text-align: left;
   padding: 40px 0px 40px 0px;
+
+  @media (max-width: 770px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 `;
 
 export const StyledAvatar = styled.div`
@@ -32,11 +47,26 @@ export const StyledAvatar = styled.div`
   color: #484848;
   letter-spacing: 0.7px;
   margin-right: 20px;
+
+  @media (max-width: 770px) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  @media (max-width: 500px) {
+    margin: 0 auto;
+    margin-bottom: 7px;
+  }
 `;
 
 export const StyledLoadingIcon = styled.img`
   width: 5%;
   margin: 0 auto;
+
+  @media (max-width: 500px) {
+    width: 16%;
+  }
 `;
 
 export const StyledNickName = styled.p`
@@ -46,10 +76,27 @@ export const StyledNickName = styled.p`
   font-size: 1.3rem;
   text-align: left;
   margin-bottom: 10px;
+
+  @media (max-width: 770px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 `;
 
 export const StyledDescription = styled.p`
   color: #484848;
   font-size: 1.1rem;
   letter-spacing: 0.2px;
+  text-align: justify;
+
+  @media (max-width: 770px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 `;

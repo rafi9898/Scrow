@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export const StyledControlBox = styled.div`
   width: 55%;
@@ -11,6 +12,13 @@ export const StyledControlBox = styled.div`
   margin: 0 auto;
   margin-top: 9vh;
   text-align: center;
+  overflow: scroll;
+
+  @media (max-width: 1000px) {
+    margin-top: 4vh;
+    width: 90%;
+    height: 80%;
+  }
 `;
 
 export const StyledIconCog = styled(FontAwesomeIcon)`
@@ -18,6 +26,10 @@ export const StyledIconCog = styled(FontAwesomeIcon)`
   font-size: 2.5rem;
   margin-top: 30px;
   text-shadow: 1px 2px black;
+
+  @media (max-width: 1000px) {
+    font-size: 2rem;
+  }
 `;
 
 export const StyledControlTitle = styled.h2`
@@ -27,6 +39,10 @@ export const StyledControlTitle = styled.h2`
   font-weight: 400;
   margin-top: 24px;
   margin-bottom: 20px;
+
+  @media (max-width: 1000px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const StyledSuccessTitle = styled.h1`
@@ -34,6 +50,10 @@ export const StyledSuccessTitle = styled.h1`
   color: #283655;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media (max-width: 1000px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const StyleSuccessBox = styled.div`
@@ -53,6 +73,10 @@ export const StyledSuccessSubTitle = styled.h2`
   letter-spacing: 0.3px;
   margin-top: 18px;
   margin-bottom: 15px;
+
+  @media (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const StyledFormBox = styled.form`
@@ -71,6 +95,10 @@ export const StyledInput = styled.input`
   margin-top: 15px;
   padding: 12px 0px 12px 14px;
   font-size: 1rem;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
 `;
 
 export const StyledButton = styled.button`
@@ -88,9 +116,21 @@ export const StyledButton = styled.button`
   letter-spacing: 0.3px;
   cursor: pointer;
   transition: all 0.3s;
+  cursor: pointer;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    padding: 10px 18px;
+  }
 
   &:hover {
     background-color: #3e5277;
     transition: all 0.3s;
   }
+`;
+
+export const StyledLink = styled(Link)`
+  color: #ececec;
+  text-decoration: none;
 `;
