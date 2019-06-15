@@ -26,6 +26,10 @@ export const StyledInput = styled.input`
   text-align: center;
   font-size: 1.1rem;
   margin-top: 10px;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
 `;
 
 export const StyledButtonSuccess = styled.button`
