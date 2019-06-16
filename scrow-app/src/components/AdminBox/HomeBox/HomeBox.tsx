@@ -4,7 +4,6 @@ import {
   StyledContainer,
   StyledTitle,
   StyledSubTitle,
-  StyledDetailBox,
   StyledCount
 } from "./styled/HomeBoxStyled";
 
@@ -13,15 +12,16 @@ class HomeBox extends Component {
     return (
       <StyledWrapper>
         <StyledContainer>
-          <StyledDetailBox>
-            <StyledTitle>Statystyki</StyledTitle>
-            <StyledSubTitle>Ilość produktów: </StyledSubTitle>
-            <StyledCount>5</StyledCount>
-            <StyledSubTitle>Ilość zamówień: </StyledSubTitle>
-            <StyledCount>5</StyledCount>
-            <StyledSubTitle>Liczba użytkowników: </StyledSubTitle>{" "}
-            <StyledCount>68</StyledCount>
-          </StyledDetailBox>
+          <StyledTitle>Statystyki</StyledTitle>
+          <StyledSubTitle>
+            Ilość produktów: <StyledCount>5</StyledCount>
+          </StyledSubTitle>
+          <StyledSubTitle>
+            Ilość zamówień: <StyledCount>5</StyledCount>
+          </StyledSubTitle>
+          <StyledSubTitle>
+            Liczba użytkowników: <StyledCount>68</StyledCount>
+          </StyledSubTitle>
         </StyledContainer>
       </StyledWrapper>
     );

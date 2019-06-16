@@ -10,6 +10,7 @@ import Payment from "./components/Pages/Payment/Payment";
 import PaymentSuccess from "./components/Pages/PaymentSuccess/PaymentSuccess";
 import MyOrders from "./components/Pages/MyOrders/MyOrders";
 import AdminHome from "./components/Pages/AdminPanel/AdminHome";
+import AddOffer from "./components/Pages/AdminPanel/AddOffer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -27,7 +28,8 @@ const App: React.FC = () => {
           <Route path="/payment/:id" component={Payment} />
           <Route path="/payment-success" component={PaymentSuccess} />
           <Route path="/my-orders" component={MyOrders} />
-          <Route path="/admin" component={AdminHome} />
+          <Route path="/admin-panel" component={AdminHome} />
+          <Route path="/admin-add-offer" component={AddOffer} />
         </Switch>
       </BrowserRouter>
     </div>
