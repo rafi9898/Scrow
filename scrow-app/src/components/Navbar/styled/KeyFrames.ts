@@ -10,3 +10,14 @@ export const keyFrameSildeNav = keyframes`
     opacity: 1;
   }
 `;
+
+export const keyFrameSildeNavDesktop = keyframes`
+  0% {
+    width: 0vw;
+    opacity: 0;
+  }
+  100% {
+    width: 23vw;
+    opacity: 1;
+  }
+`;
