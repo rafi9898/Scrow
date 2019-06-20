@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
   width: 100%;
+  height: auto;
 `;
 
 export const StyledContainer = styled.div`
@@ -33,12 +34,14 @@ export const StyledFormInput = styled.input`
   letter-spacing: 0.1px;
   margin-bottom: 13px;
   display: block;
+  overflow: scroll;
 `;
 
 export const StyledFormSelect = styled.select`
   width: 100%;
   height: 40px;
   margin: 0 auto;
+  text-align-last: center;
   padding: 2px 0px;
   display: block;
   text-align: center;
@@ -85,8 +88,8 @@ export const StyledFormArea = styled.textarea`
   width: 100%;
   height: 300px;
   display: block;
-  padding: 2px 4px;
-  font-size: 1rem;
+  padding: 8px 12px;
+  font-size: 1.2rem;
   color: #464646;
   letter-spacing: 0.1px;
   margin-bottom: 10px;
