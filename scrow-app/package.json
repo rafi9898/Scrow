@@ -17,7 +17,7 @@
     "@types/rx": "^4.1.1",
     "@types/styled-components": "^4.1.15",
     "@types/window-size": "^0.2.4",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "material-ui-rating": "^3.1.1",
     "rc-pagination": "^1.20.1",
     "react": "^16.8.6",
